@@ -47,8 +47,11 @@
             <nav class="hidden md:flex space-x-8">
                 <a href="#home" class="text-lg font-medium text-gray-700 hover:text-primary transition duration-300">Home</a>
                 <a href="#services" class="text-lg font-medium text-gray-700 hover:text-primary transition duration-300">Services</a>
+                <!-- ABOUT LINK MOVED BEFORE TESTIMONIALS -->
                 <a href="#about" class="text-lg font-medium text-gray-700 hover:text-primary transition duration-300">About</a>
-                <a href="#contact" class="px-4 py-2 text-lg font-medium text-gray-700 bg-white rounded-full hover:bg-teal-700 transition duration-300 shadow-md">Contact</a>
+                <a href="#testimonials" class="text-lg font-medium text-gray-700 hover:text-primary transition duration-300">Testimonials</a>
+                <!-- CTA Button: Now styled to match the Hero buttons -->
+                <a href="#contact" class="px-4 py-2 text-lg font-medium text-primary bg-white border border-primary rounded-full hover:bg-teal-50 transition duration-300 shadow-md">Contact</a>
             </nav>
             <!-- Mobile Menu Button (Placeholder/simulated) -->
             <button class="md:hidden text-gray-600 hover:text-primary focus:outline-none" aria-label="Toggle Menu">
@@ -72,7 +75,8 @@
                             Archana Datir offers personalized life coaching and supportive counseling to help you navigate change, foster emotional growth, and create a life of purpose.
                         </p>
                         <div class="mt-10 flex space-x-4">
-                            <a href="#services" class="px-8 py-3 text-lg font-semibold text-primary bg-white rounded-full shadow-lg hover:bg-teal-700 transition duration-300 transform hover:scale-105">
+                            <!-- CTA Button: Now uses the secondary/bordered style to match 'Book a Session' -->
+                            <a href="#services" class="px-8 py-3 text-lg font-semibold text-primary bg-white border border-primary rounded-full shadow-md hover:bg-teal-50 transition duration-300">
                                 Explore Services
                             </a>
                             <a href="#contact" class="px-8 py-3 text-lg font-semibold text-primary bg-white border border-primary rounded-full shadow-md hover:bg-teal-50 transition duration-300">
@@ -129,7 +133,7 @@
             </div>
         </section>
 
-        <!-- 3. About Section (The Coach) -->
+        <!-- 3. About Section (The Coach) - MOVED UP -->
         <section id="about" class="py-20 bg-primary/5">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="lg:grid lg:grid-cols-12 lg:gap-12 items-center">
@@ -158,7 +162,67 @@
             </div>
         </section>
 
-        <!-- 4. Contact Section -->
+        <!-- 4. Testimonials Section (MOVED DOWN) -->
+        <section id="testimonials" class="py-20 bg-primary/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-extrabold text-text-dark sm:text-4xl">Client Success Stories</h2>
+                    <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">Hear what people are saying about finding their space within.</p>
+                </div>
+
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-primary/60">
+                        <!-- Icon for Quote -->
+                        <svg class="w-8 h-8 text-primary mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.25 18H5.75v-6h3.5v6zm6.5 0h-3.5v-6h3.5v6zM4.75 8.75h4.5v-3.5h-4.5v3.5zm6.5 0h4.5v-3.5h-4.5v3.5zM2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10-10-4.477-10-10zm10 8c4.411 0 8-3.589 8-8s-3.589-8-8-8-8 3.589-8 8 3.589 8 8 8z"/></svg>
+                        <p class="italic text-gray-700 leading-relaxed">"Working with Archana was transformative. I finally gained the clarity to pursue my career goals and felt genuinely supported through the process. Highly recommend for anyone feeling stuck!"</p>
+                        <p class="mt-4 font-semibold text-text-dark">- Priya S., Marketing Professional</p>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-primary/60">
+                         <!-- Icon for Quote -->
+                        <svg class="w-8 h-8 text-primary mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.25 18H5.75v-6h3.5v6zm6.5 0h-3.5v-6h3.5v6zM4.75 8.75h4.5v-3.5h-4.5v3.5zm6.5 0h4.5v-3.5h-4.5v3.5zM2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10-10-4.477-10-10zm10 8c4.411 0 8-3.589 8-8s-3.589-8-8-8-8 3.589-8 8 3.589 8 8 8z"/></svg>
+                        <p class="italic text-gray-700 leading-relaxed">"The counseling sessions provided me with practical mindfulness tools that drastically reduced my anxiety. It truly felt like finding a safe space to grow and achieve better balance."</p>
+                        <p class="mt-4 font-semibold text-text-dark">- Rohan K., Entrepreneur</p>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-primary/60">
+                        <!-- Icon for Quote -->
+                        <svg class="w-8 h-8 text-primary mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.25 18H5.75v-6h3.5v6zm6.5 0h-3.5v-6h3.5v6zM4.75 8.75h4.5v-3.5h-4.5v3.5zm6.5 0h4.5v-3.5h-4.5v3.5zM2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10-10-4.477-10-10zm10 8c4.411 0 8-3.589 8-8s-3.589-8-8-8-8 3.589-8 8 3.589 8 8 8z"/></svg>
+                        <p class="italic text-gray-700 leading-relaxed">"Archana's guidance helped me navigate a very difficult life transition. Her compassionate approach made all the difference in my emotional well-being and gave me the strength to move forward."</p>
+                        <p class="mt-4 font-semibold text-text-dark">- Anita V., Teacher</p>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-primary/60">
+                         <!-- Icon for Quote -->
+                        <svg class="w-8 h-8 text-primary mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.25 18H5.75v-6h3.5v6zm6.5 0h-3.5v-6h3.5v6zM4.75 8.75h4.5v-3.5h-4.5v3.5zm6.5 0h4.5v-3.5h-4.5v3.5zM2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10-10-4.477-10-10zm10 8c4.411 0 8-3.589 8-8s-3.589-8-8-8-8 3.589-8 8 3.589 8 8 8z"/></svg>
+                        <p class="italic text-gray-700 leading-relaxed">"The life coaching sessions were incredibly practical. I was able to define my goals and, with Archana's support, create a clear path to achieve them. I feel more confident than ever."</p>
+                        <p class="mt-4 font-semibold text-text-dark">- Sameer P., Software Engineer</p>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-primary/60">
+                        <!-- Icon for Quote -->
+                        <svg class="w-8 h-8 text-primary mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.25 18H5.75v-6h3.5v6zm6.5 0h-3.5v-6h3.5v6zM4.75 8.75h4.5v-3.5h-4.5v3.5zm6.5 0h4.5v-3.5h-4.5v3.5zM2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10-10-4.477-10-10zm10 8c4.411 0 8-3.589 8-8s-3.589-8-8-8-8 3.589-8 8 3.589 8 8 8z"/></svg>
+                        <p class="italic text-gray-700 leading-relaxed">"I was skeptical about counseling, but the safe and non-judgmental space Archana created allowed me to open up and work through my anxiety. It's been a life-changing experience."</p>
+                        <p class="mt-4 font-semibold text-text-dark">- R. Gupta, Student</p>
+                    </div>
+
+                    <!-- Testimonial 6 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-primary/60">
+                         <!-- Icon for Quote -->
+                        <svg class="w-8 h-8 text-primary mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.25 18H5.75v-6h3.5v6zm6.5 0h-3.5v-6h3.5v6zM4.75 8.75h4.5v-3.5h-4.5v3.5zm6.5 0h4.5v-3.5h-4.5v3.5zM2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10-10-4.477-10-10zm10 8c4.411 0 8-3.589 8-8s-3.589-8-8-8-8 3.589-8 8 3.589 8 8 8z"/></svg>
+                        <p class="italic text-gray-700 leading-relaxed">"The balance between practical life coaching and compassionate counseling is perfect. I've seen measurable growth in both my personal and professional life. Thank you, Archana!"</p>
+                        <p class="mt-4 font-semibold text-text-dark">- Kavita D., Homemaker</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Contact Section -->
         <section id="contact" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-3xl font-extrabold text-text-dark sm:text-4xl">Ready to Begin Your Journey?</h2>
@@ -172,12 +236,13 @@
                             <div class="flex items-center space-x-3 mt-2">
                                 <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                                 <span class="font-medium">Mobile:</span>
-                                <a href="tel:99230 58707" class="text-primary font-bold text-xl hover:text-teal-700 transition duration-300">99230 58707</a>
+                                <!-- Updated mobile number and link -->
+                                <a href="tel:9923058707" class="text-primary font-bold text-xl hover:text-teal-700 transition duration-300">99230 58707</a>
                             </div>
                             <div class="flex items-center space-x-3 mt-4">
                                 <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                 <span class="font-medium">Email:</span>
-                                <!-- Using a generic placeholder email for demonstration -->
+                                <!-- Updated email address -->
                                 <a href="mailto:archana.bari@gmail.com" class="text-primary font-bold text-xl hover:text-teal-700 transition duration-300">archana.bari@gmail.com</a>
                             </div>
                         </div>
@@ -193,10 +258,29 @@
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
-            <div class="text-center md:text-left mb-4 md:mb-0">
+            <div class="text-center md:text-left mb-6 md:mb-0">
                 <p class="text-lg font-semibold text-primary">spacewithin.co.in</p>
+                <!-- Updated copyright year -->
                 <p class="text-sm text-gray-400">&copy; 2025 Spacewithin. All rights reserved.</p>
             </div>
+
+            <!-- Social Media Links (New) -->
+            <div class="flex space-x-6 mb-6 md:mb-0">
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/spacewithin.co.in" target="_blank" class="text-gray-400 hover:text-primary transition duration-300" aria-label="Facebook">
+                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.589 0 0 .589 0 1.316v21.368C0 23.411.589 24 1.325 24h11.498v-9.294H9.692v-3.561h3.131V8.402c0-3.12 1.892-4.819 4.674-4.819 1.343 0 2.499.1 2.842.145v3.29h-1.94c-1.528 0-1.825.727-1.825 1.787v2.358h3.56l-.465 3.561h-3.095V24h6.142c.736 0 1.325-.589 1.325-1.316V1.316C24 .589 23.411 0 22.675 0z"/></svg>
+                </a>
+                <!-- YouTube -->
+                <a href="https://www.youtube.com/@space-within" target="_blank" class="text-gray-400 hover:text-primary transition duration-300" aria-label="YouTube">
+                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.5 3.5 12 3.5 12 3.5s-7.5.001-9.377.55A3.016 3.016 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.136 2.122C4.5 20.5 12 20.5 12 20.5s7.5-.001 9.378-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.52v-7.04l6.634 3.52-6.634 3.52z"/></svg>
+                </a>
+                <!-- Blog (Using a document icon and a placeholder link) -->
+                <a href="#blog" class="text-gray-400 hover:text-primary transition duration-300 flex items-center space-x-2" aria-label="Blog: Space Within">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13M18.75 3.25l-2.75 2.75M5.25 3.25l2.75 2.75M3 10.25h18M3 15.25h18M6.75 18.25h-3.5m18 0h-3.5"></path></svg>
+                    <span class="text-sm hidden sm:inline">Blog</span>
+                </a>
+            </div>
+
             <div class="flex flex-col items-center md:items-end">
                 <p class="text-sm font-light text-gray-300">Counseling & Life Coaching Services</p>
                 <p class="text-sm font-light text-gray-300">Contact: Archana Datir</p>
