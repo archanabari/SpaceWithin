@@ -40,24 +40,34 @@
     <header class="sticky top-0 z-50 bg-white shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
             <!-- Logo/Site Name -->
-            <a href="#" class="text-2xl font-bold text-primary tracking-tight">
+            <a href="#home" class="text-2xl font-bold text-primary tracking-tight transition duration-300 hover:opacity-80">
                 <span class="text-gray-700">space</span><span class="text-primary">within.</span><span class="text-sm font-normal text-gray-500 hidden sm:inline">co.in</span>
             </a>
-            <!-- Navigation Links (Hidden on mobile, uses external menu concept if needed, simple for single file) -->
+            <!-- Navigation Links (Desktop) -->
             <nav class="hidden md:flex space-x-8">
                 <a href="#home" class="text-lg font-medium text-gray-700 hover:text-primary transition duration-300">Home</a>
                 <a href="#services" class="text-lg font-medium text-gray-700 hover:text-primary transition duration-300">Services</a>
-                <!-- ABOUT LINK MOVED BEFORE TESTIMONIALS -->
                 <a href="#about" class="text-lg font-medium text-gray-700 hover:text-primary transition duration-300">About</a>
                 <a href="#testimonials" class="text-lg font-medium text-gray-700 hover:text-primary transition duration-300">Testimonials</a>
-                <!-- CTA Button: Now styled to match the Hero buttons -->
-                <a href="#contact" class="px-4 py-2 text-lg font-medium text-primary bg-white border border-primary rounded-full hover:bg-teal-50 transition duration-300 shadow-md">Contact</a>
+                <!-- CTA Button: Now uses the Explore Services outline style and text -->
+                <a href="#contact" class="px-4 py-2 text-lg font-semibold text-primary bg-white border border-primary rounded-full hover:bg-teal-50 transition duration-300 shadow-md">Book a Session</a>
             </nav>
-            <!-- Mobile Menu Button (Placeholder/simulated) -->
-            <button class="md:hidden text-gray-600 hover:text-primary focus:outline-none" aria-label="Toggle Menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-primary focus:outline-none" aria-label="Toggle Menu">
+                <svg class="w-7 h-7" id="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </div>
+
+        <!-- Mobile Menu Container (Initially Hidden) -->
+        <nav id="mobile-menu" class="hidden md:hidden bg-white px-4 pb-4 shadow-lg border-t border-gray-100">
+            <!-- Links are block elements for full-width tap area -->
+            <a href="#home" class="block py-3 text-lg font-medium text-gray-700 hover:text-primary transition duration-300 border-b border-gray-100">Home</a>
+            <a href="#services" class="block py-3 text-lg font-medium text-gray-700 hover:text-primary transition duration-300 border-b border-gray-100">Services</a>
+            <a href="#about" class="block py-3 text-lg font-medium text-gray-700 hover:text-primary transition duration-300 border-b border-gray-100">About</a>
+            <a href="#testimonials" class="block py-3 text-lg font-medium text-gray-700 hover:text-primary transition duration-300 border-b border-gray-100">Testimonials</a>
+            <!-- CTA Button: Now uses the Explore Services outline style -->
+            <a href="#contact" class="mt-4 block w-full text-center px-4 py-3 text-lg font-semibold text-primary bg-white border border-primary rounded-full hover:bg-teal-50 transition duration-300 shadow-lg">Book a Session</a>
+        </nav>
     </header>
 
     <main>
@@ -67,29 +77,33 @@
                 <div class="lg:grid lg:grid-cols-12 lg:gap-12 items-center">
                     <!-- Text Content -->
                     <div class="lg:col-span-6 order-2 lg:order-1">
-                        <span class="text-primary text-sm font-semibold uppercase tracking-wider">Find Your Inner Clarity</span>
+                        <span class="text-primary text-sm font-semibold uppercase tracking-widest">Find Your Inner Clarity</span>
                         <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-text-dark sm:text-5xl lg:text-6xl">
                             Unlock Your Potential Through Counseling & Coaching
                         </h1>
                         <p class="mt-6 text-xl text-gray-600 max-w-lg">
                             Archana Datir offers personalized life coaching and supportive counseling to help you navigate change, foster emotional growth, and create a life of purpose.
                         </p>
-                        <div class="mt-10 flex space-x-4">
-                            <!-- CTA Button: Now uses the secondary/bordered style to match 'Book a Session' -->
-                            <a href="#services" class="px-8 py-3 text-lg font-semibold text-primary bg-white border border-primary rounded-full shadow-md hover:bg-teal-50 transition duration-300">
+                        <div class="mt-10 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                            <!-- CTA Button 1: Explore Services (The template for the outline style) -->
+                            <a href="#services" class="w-full sm:w-auto text-center px-8 py-3 text-lg font-semibold text-primary bg-white border border-primary rounded-full shadow-md hover:bg-teal-50 transition duration-300">
                                 Explore Services
                             </a>
-                            <a href="#contact" class="px-8 py-3 text-lg font-semibold text-primary bg-white border border-primary rounded-full shadow-md hover:bg-teal-50 transition duration-300">
+                            <!-- CTA Button 2: Book a Session - NOW MATCHES EXPLORE SERVICES STYLE -->
+                            <a href="#contact" class="w-full sm:w-auto text-center px-8 py-3 text-lg font-semibold text-primary bg-white border border-primary rounded-full shadow-md hover:bg-teal-50 transition duration-300">
                                 Book a Session
                             </a>
                         </div>
                     </div>
                     <!-- Image/Visual Placeholder -->
                     <div class="lg:col-span-6 mt-10 lg:mt-0 flex justify-center order-1 lg:order-2">
-                        <!-- Placeholder for an uplifting visual (e.g., abstract art, stylized logo, or professional photo) -->
-                        <div class="w-full max-w-md h-96 bg-primary/20 rounded-3xl shadow-2xl flex items-center justify-center p-8 border-4 border-primary/40">
-                            <svg class="w-20 h-20 text-primary opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"></path></svg>
-                            <span class="absolute text-xl font-bold text-primary/80">Spacewithin</span>
+                        <!-- Placeholder for an uplifting visual -->
+                        <div class="w-full max-w-md h-96 bg-primary/20 rounded-3xl shadow-2xl flex items-center justify-center p-8 border-4 border-primary/40 relative overflow-hidden">
+                            <!-- Abstract, flowing shapes to represent mind/space -->
+                            <div class="absolute w-60 h-60 bg-white opacity-10 rounded-full blur-xl top-10 left-10"></div>
+                            <div class="absolute w-40 h-40 bg-white opacity-10 rounded-full blur-xl bottom-10 right-10"></div>
+                            <svg class="w-24 h-24 text-primary opacity-70 absolute" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"></path></svg>
+                            <span class="absolute text-2xl font-extrabold text-primary/80 tracking-widest">Space within</span>
                         </div>
                     </div>
                 </div>
@@ -104,27 +118,30 @@
 
                 <div class="mt-16 grid grid-cols-1 gap-10 md:grid-cols-3">
                     <!-- Service Card 1: Life Coaching -->
-                    <div class="bg-secondary p-8 rounded-xl shadow-lg border border-primary/10 transition duration-300 hover:shadow-2xl hover:border-primary">
-                        <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary/20 mx-auto">
-                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <div class="bg-secondary p-8 rounded-xl shadow-lg border-2 border-primary/10 transition duration-300 hover:shadow-2xl hover:border-primary hover:scale-[1.02]">
+                        <div class="flex items-center justify-center w-14 h-14 rounded-full bg-primary/20 mx-auto">
+                            <!-- Icon for Goal Setting/Coaching (Lightning) -->
+                            <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                         </div>
                         <h3 class="mt-6 text-xl font-bold text-text-dark">Life Coaching</h3>
                         <p class="mt-3 text-gray-600">Setting clear goals, overcoming hurdles, and maximizing your personal performance to achieve your vision.</p>
                     </div>
 
                     <!-- Service Card 2: Counseling Support -->
-                    <div class="bg-secondary p-8 rounded-xl shadow-lg border border-primary/10 transition duration-300 hover:shadow-2xl hover:border-primary">
-                        <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary/20 mx-auto">
-                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.805A12.593 12.593 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                    <div class="bg-secondary p-8 rounded-xl shadow-lg border-2 border-primary/10 transition duration-300 hover:shadow-2xl hover:border-primary hover:scale-[1.02]">
+                        <div class="flex items-center justify-center w-14 h-14 rounded-full bg-primary/20 mx-auto">
+                            <!-- Icon for Emotional Support (Chat Bubble/Heart) -->
+                            <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.805A12.593 12.593 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
                         </div>
                         <h3 class="mt-6 text-xl font-bold text-text-dark">Emotional Counseling</h3>
                         <p class="mt-3 text-gray-600">Providing a safe space to process emotions, manage stress, anxiety, and navigate relationship challenges.</p>
                     </div>
 
                     <!-- Service Card 3: Holistic Growth -->
-                    <div class="bg-secondary p-8 rounded-xl shadow-lg border border-primary/10 transition duration-300 hover:shadow-2xl hover:border-primary">
-                        <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary/20 mx-auto">
-                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10m0 0h16m-4-8h4m-4 8h4m-4-4h4M4 7h16M4 7a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H6a2 2 0 01-2-2V7z"></path></svg>
+                    <div class="bg-secondary p-8 rounded-xl shadow-lg border-2 border-primary/10 transition duration-300 hover:shadow-2xl hover:border-primary hover:scale-[1.02]">
+                        <div class="flex items-center justify-center w-14 h-14 rounded-full bg-primary/20 mx-auto">
+                            <!-- Icon for Mindfulness (Balance/Scale) -->
+                            <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         </div>
                         <h3 class="mt-6 text-xl font-bold text-text-dark">Mindfulness & Balance</h3>
                         <p class="mt-3 text-gray-600">Developing practical tools and awareness techniques for long-term mental and emotional well-being.</p>
@@ -133,17 +150,17 @@
             </div>
         </section>
 
-        <!-- 3. About Section (The Coach) - MOVED UP -->
+        <!-- 3. About Section (The Coach) -->
         <section id="about" class="py-20 bg-primary/5">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="lg:grid lg:grid-cols-12 lg:gap-12 items-center">
                     <!-- Image Placeholder -->
                     <div class="lg:col-span-4 flex justify-center mb-10 lg:mb-0">
-                        <div class="w-64 h-64 bg-primary rounded-full shadow-xl flex items-center justify-center p-2">
+                        <div class="w-64 h-64 bg-primary rounded-full shadow-xl flex items-center justify-center p-2 border-4 border-white">
                             <!-- Placeholder for Archana's Photo -->
                             <div class="w-full h-full bg-white rounded-full flex flex-col items-center justify-center text-primary text-center">
                                 <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
-                                <span class="text-sm mt-1">Archana Datir</span>
+                                <span class="text-sm mt-1 font-bold">Archana Datir, Coach</span>
                             </div>
                         </div>
                     </div>
@@ -162,8 +179,8 @@
             </div>
         </section>
 
-        <!-- 4. Testimonials Section (MOVED DOWN) -->
-        <section id="testimonials" class="py-20 bg-primary/10">
+        <!-- 4. Testimonials Section -->
+        <section id="testimonials" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
                     <h2 class="text-3xl font-extrabold text-text-dark sm:text-4xl">Client Success Stories</h2>
@@ -172,55 +189,49 @@
 
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
                     <!-- Testimonial 1 -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-primary/60">
-                        <!-- Icon for Quote -->
-                        <svg class="w-8 h-8 text-primary mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.25 18H5.75v-6h3.5v6zm6.5 0h-3.5v-6h3.5v6zM4.75 8.75h4.5v-3.5h-4.5v3.5zm6.5 0h4.5v-3.5h-4.5v3.5zM2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10-10-4.477-10-10zm10 8c4.411 0 8-3.589 8-8s-3.589-8-8-8-8 3.589-8 8 3.589 8 8 8z"/></svg>
-                        <p class="italic text-gray-700 leading-relaxed">"I am absolutely thrilled to share my transformative journey with Archana Datir, my Law of Attraction mentor. Her guidance, wisdom, and unwavering support have empowered me to unlock my true potential and manifest my deepest desires.
-
-With Archana's expert coaching, I've learned to harness the power of my thoughts, emotions, and energy to create a life I love. Her teachings have helped me overcome self-doubt, build confidence, and cultivate a positive mindset.
-
-Thanks to Archana, I've experienced profound shifts in my life, including  relationships, career, self-esteem and finances. Her mentorship has been a game-changer for me, and I'm forever grateful.
-
-I highly recommend Archana to anyone seeking to transform their life and unlock their full potential. Her expertise, compassion, and dedication make them an exceptional guide on this journey."</p>
+                    <div class="bg-secondary p-8 rounded-xl shadow-xl border-l-4 border-primary/60 transition duration-300 hover:shadow-2xl">
+                        <!-- New Quote Icon -->
+                        <svg class="w-8 h-8 text-primary mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13.626 6.347c-.524-1.294-1.636-2.183-2.96-2.183-1.602 0-2.81 1.057-3.15 2.51-.237 1.01-.223 2.148.064 3.149.288 1.002.825 1.838 1.57 2.417.745.58 1.63 1.004 2.592 1.258l-.004-.002c1.472.385 3.016.29 4.385-.262.298-.12.483-.418.423-.746a.75.75 0 00-.735-.632c-1.077.168-2.183.136-3.265-.098-.797-.174-1.554-.537-2.16-1.066-.465-.411-.776-.948-.902-1.536-.126-.588-.135-1.2-.025-1.782.176-.942.87-1.657 1.77-1.854.67-.143 1.353-.105 1.99.112.274.093.585.045.83-.122a.75.75 0 00.231-.912zM19.626 6.347c-.524-1.294-1.636-2.183-2.96-2.183-1.602 0-2.81 1.057-3.15 2.51-.237 1.01-.223 2.148.064 3.149.288 1.002.825 1.838 1.57 2.417.745.58 1.63 1.004 2.592 1.258l-.004-.002c1.472.385 3.016.29 4.385-.262.298-.12.483-.418.423-.746a.75.75 0 00-.735-.632c-1.077.168-2.183.136-3.265-.098-.797-.174-1.554-.537-2.16-1.066-.465-.411-.776-.948-.902-1.536-.126-.588-.135-1.2-.025-1.782.176-.942.87-1.657 1.77-1.854.67-.143 1.353-.105 1.99.112.274.093.585.045.83-.122a.75.75 0 00.231-.912z"/></svg>
+                        <p class="italic text-gray-700 leading-relaxed">"I am absolutely thrilled to share my transformative journey with Archana Datir, my Law of Attraction mentor. Her guidance, wisdom, and unwavering support have empowered me to unlock my true potential and manifest my deepest desires... Her mentorship has been a game-changer for me, and I'm forever grateful."</p>
                         <p class="mt-4 font-semibold text-text-dark">- Madhuri Deshpande (Karanje)., Entrepreneur</p>
                     </div>
 
                     <!-- Testimonial 2 -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-primary/60">
-                         <!-- Icon for Quote -->
-                        <svg class="w-8 h-8 text-primary mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.25 18H5.75v-6h3.5v6zm6.5 0h-3.5v-6h3.5v6zM4.75 8.75h4.5v-3.5h-4.5v3.5zm6.5 0h4.5v-3.5h-4.5v3.5zM2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10-10-4.477-10-10zm10 8c4.411 0 8-3.589 8-8s-3.589-8-8-8-8 3.589-8 8 3.589 8 8 8z"/></svg>
+                    <div class="bg-secondary p-8 rounded-xl shadow-xl border-l-4 border-primary/60 transition duration-300 hover:shadow-2xl">
+                        <!-- New Quote Icon -->
+                        <svg class="w-8 h-8 text-primary mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13.626 6.347c-.524-1.294-1.636-2.183-2.96-2.183-1.602 0-2.81 1.057-3.15 2.51-.237 1.01-.223 2.148.064 3.149.288 1.002.825 1.838 1.57 2.417.745.58 1.63 1.004 2.592 1.258l-.004-.002c1.472.385 3.016.29 4.385-.262.298-.12.483-.418.423-.746a.75.75 0 00-.735-.632c-1.077.168-2.183.136-3.265-.098-.797-.174-1.554-.537-2.16-1.066-.465-.411-.776-.948-.902-1.536-.126-.588-.135-1.2-.025-1.782.176-.942.87-1.657 1.77-1.854.67-.143 1.353-.105 1.99.112.274.093.585.045.83-.122a.75.75 0 00.231-.912zM19.626 6.347c-.524-1.294-1.636-2.183-2.96-2.183-1.602 0-2.81 1.057-3.15 2.51-.237 1.01-.223 2.148.064 3.149.288 1.002.825 1.838 1.57 2.417.745.58 1.63 1.004 2.592 1.258l-.004-.002c1.472.385 3.016.29 4.385-.262.298-.12.483-.418.423-.746a.75.75 0 00-.735-.632c-1.077.168-2.183.136-3.265-.098-.797-.174-1.554-.537-2.16-1.066-.465-.411-.776-.948-.902-1.536-.126-.588-.135-1.2-.025-1.782.176-.942.87-1.657 1.77-1.854.67-.143 1.353-.105 1.99.112.274.093.585.045.83-.122a.75.75 0 00.231-.912z"/></svg>
                         <p class="italic text-gray-700 leading-relaxed">"The counseling sessions provided me with practical mindfulness tools that drastically reduced my anxiety. It truly felt like finding a safe space to grow and achieve better balance."</p>
                         <p class="mt-4 font-semibold text-text-dark">- Rohan K., Entrepreneur</p>
                     </div>
-                    
+
                     <!-- Testimonial 3 -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-primary/60">
-                        <!-- Icon for Quote -->
-                        <svg class="w-8 h-8 text-primary mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.25 18H5.75v-6h3.5v6zm6.5 0h-3.5v-6h3.5v6zM4.75 8.75h4.5v-3.5h-4.5v3.5zm6.5 0h4.5v-3.5h-4.5v3.5zM2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10-10-4.477-10-10zm10 8c4.411 0 8-3.589 8-8s-3.589-8-8-8-8 3.589-8 8 3.589 8 8 8z"/></svg>
+                    <div class="bg-secondary p-8 rounded-xl shadow-xl border-l-4 border-primary/60 transition duration-300 hover:shadow-2xl">
+                        <!-- New Quote Icon -->
+                        <svg class="w-8 h-8 text-primary mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13.626 6.347c-.524-1.294-1.636-2.183-2.96-2.183-1.602 0-2.81 1.057-3.15 2.51-.237 1.01-.223 2.148.064 3.149.288 1.002.825 1.838 1.57 2.417.745.58 1.63 1.004 2.592 1.258l-.004-.002c1.472.385 3.016.29 4.385-.262.298-.12.483-.418.423-.746a.75.75 0 00-.735-.632c-1.077.168-2.183.136-3.265-.098-.797-.174-1.554-.537-2.16-1.066-.465-.411-.776-.948-.902-1.536-.126-.588-.135-1.2-.025-1.782.176-.942.87-1.657 1.77-1.854.67-.143 1.353-.105 1.99.112.274.093.585.045.83-.122a.75.75 0 00.231-.912zM19.626 6.347c-.524-1.294-1.636-2.183-2.96-2.183-1.602 0-2.81 1.057-3.15 2.51-.237 1.01-.223 2.148.064 3.149.288 1.002.825 1.838 1.57 2.417.745.58 1.63 1.004 2.592 1.258l-.004-.002c1.472.385 3.016.29 4.385-.262.298-.12.483-.418.423-.746a.75.75 0 00-.735-.632c-1.077.168-2.183.136-3.265-.098-.797-.174-1.554-.537-2.16-1.066-.465-.411-.776-.948-.902-1.536-.126-.588-.135-1.2-.025-1.782.176-.942.87-1.657 1.77-1.854.67-.143 1.353-.105 1.99.112.274.093.585.045.83-.122a.75.75 0 00.231-.912z"/></svg>
                         <p class="italic text-gray-700 leading-relaxed">"Archana's guidance helped me navigate a very difficult life transition. Her compassionate approach made all the difference in my emotional well-being and gave me the strength to move forward.""</p>
                         <p class="mt-4 font-semibold text-text-dark">- Anita V., Teacher</p>
                     </div>
 
                     <!-- Testimonial 4 -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-primary/60">
-                         <!-- Icon for Quote -->
-                        <svg class="w-8 h-8 text-primary mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.25 18H5.75v-6h3.5v6zm6.5 0h-3.5v-6h3.5v6zM4.75 8.75h4.5v-3.5h-4.5v3.5zm6.5 0h4.5v-3.5h-4.5v3.5zM2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10-10-4.477-10-10zm10 8c4.411 0 8-3.589 8-8s-3.589-8-8-8-8 3.589-8 8 3.589 8 8 8z"/></svg>
+                    <div class="bg-secondary p-8 rounded-xl shadow-xl border-l-4 border-primary/60 transition duration-300 hover:shadow-2xl">
+                        <!-- New Quote Icon -->
+                        <svg class="w-8 h-8 text-primary mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13.626 6.347c-.524-1.294-1.636-2.183-2.96-2.183-1.602 0-2.81 1.057-3.15 2.51-.237 1.01-.223 2.148.064 3.149.288 1.002.825 1.838 1.57 2.417.745.58 1.63 1.004 2.592 1.258l-.004-.002c1.472.385 3.016.29 4.385-.262.298-.12.483-.418.423-.746a.75.75 0 00-.735-.632c-1.077.168-2.183.136-3.265-.098-.797-.174-1.554-.537-2.16-1.066-.465-.411-.776-.948-.902-1.536-.126-.588-.135-1.2-.025-1.782.176-.942.87-1.657 1.77-1.854.67-.143 1.353-.105 1.99.112.274.093.585.045.83-.122a.75.75 0 00.231-.912zM19.626 6.347c-.524-1.294-1.636-2.183-2.96-2.183-1.602 0-2.81 1.057-3.15 2.51-.237 1.01-.223 2.148.064 3.149.288 1.002.825 1.838 1.57 2.417.745.58 1.63 1.004 2.592 1.258l-.004-.002c1.472.385 3.016.29 4.385-.262.298-.12.483-.418.423-.746a.75.75 0 00-.735-.632c-1.077.168-2.183.136-3.265-.098-.797-.174-1.554-.537-2.16-1.066-.465-.411-.776-.948-.902-1.536-.126-.588-.135-1.2-.025-1.782.176-.942.87-1.657 1.77-1.854.67-.143 1.353-.105 1.99.112.274.093.585.045.83-.122a.75.75 0 00.231-.912z"/></svg>
                         <p class="italic text-gray-700 leading-relaxed">"The life coaching sessions were incredibly practical. I was able to define my goals and, with Archana's support, create a clear path to achieve them. I feel more confident than ever."</p>
                         <p class="mt-4 font-semibold text-text-dark">- Sameer P., Software Engineer</p>
                     </div>
 
                     <!-- Testimonial 5 -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-primary/60">
-                        <!-- Icon for Quote -->
-                        <svg class="w-8 h-8 text-primary mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.25 18H5.75v-6h3.5v6zm6.5 0h-3.5v-6h3.5v6zM4.75 8.75h4.5v-3.5h-4.5v3.5zm6.5 0h4.5v-3.5h-4.5v3.5zM2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10-10-4.477-10-10zm10 8c4.411 0 8-3.589 8-8s-3.589-8-8-8-8 3.589-8 8 3.589 8 8 8z"/></svg>
+                    <div class="bg-secondary p-8 rounded-xl shadow-xl border-l-4 border-primary/60 transition duration-300 hover:shadow-2xl">
+                        <!-- New Quote Icon -->
+                        <svg class="w-8 h-8 text-primary mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13.626 6.347c-.524-1.294-1.636-2.183-2.96-2.183-1.602 0-2.81 1.057-3.15 2.51-.237 1.01-.223 2.148.064 3.149.288 1.002.825 1.838 1.57 2.417.745.58 1.63 1.004 2.592 1.258l-.004-.002c1.472.385 3.016.29 4.385-.262.298-.12.483-.418.423-.746a.75.75 0 00-.735-.632c-1.077.168-2.183.136-3.265-.098-.797-.174-1.554-.537-2.16-1.066-.465-.411-.776-.948-.902-1.536-.126-.588-.135-1.2-.025-1.782.176-.942.87-1.657 1.77-1.854.67-.143 1.353-.105 1.99.112.274.093.585.045.83-.122a.75.75 0 00.231-.912zM19.626 6.347c-.524-1.294-1.636-2.183-2.96-2.183-1.602 0-2.81 1.057-3.15 2.51-.237 1.01-.223 2.148.064 3.149.288 1.002.825 1.838 1.57 2.417.745.58 1.63 1.004 2.592 1.258l-.004-.002c1.472.385 3.016.29 4.385-.262.298-.12.483-.418.423-.746a.75.75 0 00-.735-.632c-1.077.168-2.183.136-3.265-.098-.797-.174-1.554-.537-2.16-1.066-.465-.411-.776-.948-.902-1.536-.126-.588-.135-1.2-.025-1.782.176-.942.87-1.657 1.77-1.854.67-.143 1.353-.105 1.99.112.274.093.585.045.83-.122a.75.75 0 00.231-.912z"/></svg>
                         <p class="italic text-gray-700 leading-relaxed">"I was skeptical about counseling, but the safe and non-judgmental space Archana created allowed me to open up and work through my anxiety. It's been a life-changing experience."</p>
                         <p class="mt-4 font-semibold text-text-dark">- R. Gupta, Student</p>
                     </div>
 
                     <!-- Testimonial 6 -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-primary/60">
-                         <!-- Icon for Quote -->
-                        <svg class="w-8 h-8 text-primary mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.25 18H5.75v-6h3.5v6zm6.5 0h-3.5v-6h3.5v6zM4.75 8.75h4.5v-3.5h-4.5v3.5zm6.5 0h4.5v-3.5h-4.5v3.5zM2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10-10-4.477-10-10zm10 8c4.411 0 8-3.589 8-8s-3.589-8-8-8-8 3.589-8 8 3.589 8 8 8z"/></svg>
+                    <div class="bg-secondary p-8 rounded-xl shadow-xl border-l-4 border-primary/60 transition duration-300 hover:shadow-2xl">
+                        <!-- New Quote Icon -->
+                        <svg class="w-8 h-8 text-primary mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13.626 6.347c-.524-1.294-1.636-2.183-2.96-2.183-1.602 0-2.81 1.057-3.15 2.51-.237 1.01-.223 2.148.064 3.149.288 1.002.825 1.838 1.57 2.417.745.58 1.63 1.004 2.592 1.258l-.004-.002c1.472.385 3.016.29 4.385-.262.298-.12.483-.418.423-.746a.75.75 0 00-.735-.632c-1.077.168-2.183.136-3.265-.098-.797-.174-1.554-.537-2.16-1.066-.465-.411-.776-.948-.902-1.536-.126-.588-.135-1.2-.025-1.782.176-.942.87-1.657 1.77-1.854.67-.143 1.353-.105 1.99.112.274.093.585.045.83-.122a.75.75 0 00.231-.912zM19.626 6.347c-.524-1.294-1.636-2.183-2.96-2.183-1.602 0-2.81 1.057-3.15 2.51-.237 1.01-.223 2.148.064 3.149.288 1.002.825 1.838 1.57 2.417.745.58 1.63 1.004 2.592 1.258l-.004-.002c1.472.385 3.016.29 4.385-.262.298-.12.483-.418.423-.746a.75.75 0 00-.735-.632c-1.077.168-2.183.136-3.265-.098-.797-.174-1.554-.537-2.16-1.066-.465-.411-.776-.948-.902-1.536-.126-.588-.135-1.2-.025-1.782.176-.942.87-1.657 1.77-1.854.67-.143 1.353-.105 1.99.112.274.093.585.045.83-.122a.75.75 0 00.231-.912z"/></svg>
                         <p class="italic text-gray-700 leading-relaxed">"The balance between practical life coaching and compassionate counseling is perfect. I've seen measurable growth in both my personal and professional life. Thank you, Archana!"</p>
                         <p class="mt-4 font-semibold text-text-dark">- Kavita D., Homemaker</p>
                     </div>
@@ -229,16 +240,16 @@ I highly recommend Archana to anyone seeking to transform their life and unlock 
         </section>
 
         <!-- 5. Contact Section -->
-        <section id="contact" class="py-20 bg-white">
+        <section id="contact" class="py-20 bg-primary/5">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-3xl font-extrabold text-text-dark sm:text-4xl">Ready to Begin Your Journey?</h2>
                 <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">Get in touch with Archana Datir to schedule your consultation.</p>
 
-                <div class="mt-12 bg-secondary p-8 md:p-12 rounded-2xl shadow-xl border-t-4 border-primary max-w-3xl mx-auto">
-                    <div class="space-y-6">
+                <div class="mt-12 bg-white p-8 md:p-12 rounded-2xl shadow-xl border-t-4 border-primary max-w-3xl mx-auto">
+                    <div class="space-y-8">
                         <!-- Contact Detail Card -->
                         <div class="flex flex-col items-center text-lg text-text-dark">
-                            <span class="font-bold text-2xl text-primary mb-2">Direct Contact</span>
+                            <span class="font-bold text-2xl text-primary mb-4">Direct Contact</span>
                             <div class="flex items-center space-x-3 mt-2">
                                 <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                                 <span class="font-medium">Mobile:</span>
@@ -252,8 +263,12 @@ I highly recommend Archana to anyone seeking to transform their life and unlock 
                                 <a href="mailto:archana.bari@gmail.com" class="text-primary font-bold text-xl hover:text-teal-700 transition duration-300">archana.bari@gmail.com</a>
                             </div>
                         </div>
-
-                        <p class="text-gray-500 pt-4">We look forward to connecting with you.</p>
+                        <a href="https://wa.me/919923058707" target="_blank" class="inline-flex items-center space-x-2 px-8 py-3 text-lg font-semibold text-white bg-green-500 rounded-full shadow-lg hover:bg-green-600 transition duration-300">
+                            <!-- WhatsApp Icon SVG -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12.039 2.001c-5.514 0-9.991 4.477-9.991 9.991 0 1.97.575 3.82 1.6 5.394L2 22l5.69-1.575c1.479.82 3.167 1.266 4.349 1.266 5.514 0 9.991-4.477 9.991-9.991s-4.477-9.991-9.991-9.991zm0 18.232c-1.156 0-2.313-.34-3.32-1.008l-.235-.141-2.434.673.681-2.368-.153-.243a8.211 8.211 0 0 1-1.259-4.305c0-4.516 3.666-8.182 8.182-8.182 2.227 0 4.347.87 5.927 2.45s2.45 3.699 2.45 5.927c0 4.516-3.666 8.182-8.182 8.182zm4.018-5.32c-.22-.361-.814-.607-1.121-.734-.287-.12-.497-.181-.707.181-.21.36-.814.735-.99.886-.176.15-.351.181-.658.03a3.52 3.52 0 0 1-1.042-.647 4.14 4.14 0 0 1-.774-.963c-.22-.361-.024-.555.152-.735.15-.15.334-.209.497-.361.163-.15.22-.24.334-.407.113-.166.057-.301-.029-.407-.087-.107-.788-1.898-1.075-2.593-.286-.695-.572-.555-.782-.555-.192 0-.411-.03-.658.03-.235.06-.609.18-.921.497-.312.317-1.171 1.152-1.171 2.809 0 1.656 1.208 3.256 1.384 3.486.176.23.287.351.522.684.348.51 1.052 1.8 2.502 2.316.924.316 1.488.497 2.01.465.522-.031 1.637-.668 1.868-1.315.23-.647.23-1.192.164-1.315-.067-.123-.241-.182-.461-.299z"/></svg>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                        <p class="text-gray-500 pt-4">We look forward to connecting with you and supporting your journey to inner clarity.</p>
                     </div>
                 </div>
             </div>
@@ -287,13 +302,59 @@ I highly recommend Archana to anyone seeking to transform their life and unlock 
                 </a>
             </div>
 
-            <div class="flex flex-col items-center md:items-end">
+            <div class="flex flex-col items-center md:items-end text-center md:text-right">
                 <p class="text-sm font-light text-gray-300">Counseling & Life Coaching Services</p>
                 <p class="text-sm font-light text-gray-300">Contact: Archana Datir</p>
                 <p class="text-sm font-light text-gray-300">Mobile: 99230 58707</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        // JavaScript for Mobile Menu Toggle and UX enhancements
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIconSvg = document.getElementById('menu-icon');
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+
+            // SVG paths for switching between menu and close icons
+            const closeIconPath = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+            const menuIconPath = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+
+            /**
+             * Toggles the mobile menu visibility and switches the menu icon.
+             */
+            function toggleMenu() {
+                if (mobileMenu.classList.contains('hidden')) {
+                    // Open menu
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenu.classList.add('flex', 'flex-col');
+                    menuIconSvg.innerHTML = closeIconPath;
+                } else {
+                    // Close menu
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex', 'flex-col');
+                    menuIconSvg.innerHTML = menuIconPath;
+                }
+            }
+
+            // Event listener for the hamburger button
+            menuButton.addEventListener('click', toggleMenu);
+
+            // Close menu when a link is clicked (improves mobile UX)
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    // Close the menu after a short delay for smooth scroll to initiate
+                    setTimeout(() => {
+                        if (!mobileMenu.classList.contains('hidden')) {
+                            toggleMenu();
+                        }
+                    }, 300);
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
