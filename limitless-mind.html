@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,10 +29,10 @@
     <header class="sticky top-0 z-50 bg-white shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-3 sm:py-4">
             
-            <a href="index.html" class="flex items-center gap-2 sm:gap-3 text-xl sm:text-2xl font-bold text-primary tracking-tight transition duration-300 hover:opacity-80">
+            <a href="index.html" class="flex items-center gap-2 sm:gap-3 text-xl sm:text-2xl font-bold tracking-tight transition duration-300 hover:opacity-80">
                 <img src="Logo sc.png" alt="Spacewithin Logo" class="h-8 sm:h-10 w-auto rounded-md object-contain" onerror="this.style.display='none'">
                 <div class="flex items-baseline">
-                    <span class="text-gray-700">space</span><span class="text-primary">within.</span><span class="text-xs sm:text-sm font-normal text-gray-500 hidden sm:inline ml-0.5">co.in</span>
+                    <span class="text-gray-700">space</span><span class="text-[#0d9488]">within.</span><span class="text-xs sm:text-sm font-normal text-gray-500 hidden sm:inline ml-1">co.in</span>
                 </div>
             </a>
             
@@ -117,7 +118,6 @@
                             </div>
 
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-                                
                                 <div class="bg-teal-50 p-6 rounded-2xl relative shadow-sm border border-teal-100/50">
                                     <span class="text-5xl text-teal-200 absolute top-2 right-4 font-serif leading-none" aria-hidden="true">"</span>
                                     <p class="text-gray-700 italic relative z-10 mb-4 text-sm sm:text-base">
@@ -201,9 +201,9 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
+
                         <div class="mt-12 pt-10 border-t border-gray-200 text-center">
                             <p class="text-gray-600 italic mb-6 sm:mb-8 text-sm sm:text-base">"This is not a lecture-based course. It is a safe, interactive space where teens learn through reflection, activities, and real-life tools."</p>
                             
@@ -247,56 +247,6 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        // JavaScript for Mobile Menu Toggle and UX enhancements
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuIconSvg = document.getElementById('menu-icon');
-            
-            // Added safeguard to prevent errors if the elements aren't present on this page
-            if (menuButton && mobileMenu && menuIconSvg) {
-                const mobileLinks = mobileMenu.querySelectorAll('a');
-
-                // SVG paths for switching between menu and close icons
-                const closeIconPath = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
-                const menuIconPath = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
-
-                /**
-                 * Toggles the mobile menu visibility and switches the menu icon.
-                 */
-                function toggleMenu() {
-                    if (mobileMenu.classList.contains('hidden')) {
-                        // Open menu
-                        mobileMenu.classList.remove('hidden');
-                        mobileMenu.classList.add('flex', 'flex-col');
-                        menuIconSvg.innerHTML = closeIconPath;
-                    } else {
-                        // Close menu
-                        mobileMenu.classList.add('hidden');
-                        mobileMenu.classList.remove('flex', 'flex-col');
-                        menuIconSvg.innerHTML = menuIconPath;
-                    }
-                }
-
-                // Event listener for the hamburger button
-                menuButton.addEventListener('click', toggleMenu);
-
-                // Close menu when a link is clicked (improves mobile UX)
-                mobileLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        // Close the menu after a short delay for smooth scroll to initiate
-                        setTimeout(() => {
-                            if (!mobileMenu.classList.contains('hidden')) {
-                                toggleMenu();
-                            }
-                        }, 300);
-                    });
-                });
-            }
-        });
-    </script>
 
 </body>
 </html>
